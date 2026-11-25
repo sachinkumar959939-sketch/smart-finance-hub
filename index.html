@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Smart Finance Hub offers free SIP, EMI, FD and GST calculators and simple personal finance tools in India.">
+<meta name="keywords" content="SIP calculator, EMI calculator, FD calculator, GST calculator, finance India">
+<meta name="author" content="Smart Finance Hub">
+<title>Smart Finance Hub - Free Financial Calculators</title>
+<style>
+:root {
+  --blue:#155eef;
+  --dark:#10213a;
+  --light:#f4f7fc;
+  --text:#26354d;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:var(--light);color:var(--text);line-height:1.6}
+header{background:white;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 12px #0000000d;position:sticky;top:0;z-index:10}
+.logo{font-size:22px;font-weight:bold;color:var(--blue)}
+nav a{color:var(--dark);text-decoration:none;margin-left:18px;font-size:14px}
+.hero{background:linear-gradient(120deg,#10213a,#155eef);color:white;text-align:center;padding:65px 20px}
+.hero h1{font-size:38px;margin-bottom:12px}
+.hero p{color:#e1eaff;max-width:600px;margin:auto}
+.container{max-width:1100px;margin:35px auto;padding:0 18px}
+.section-title{text-align:center;margin-bottom:22px;color:var(--dark)}
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:17px}
+.card{background:white;padding:23px;border-radius:13px;box-shadow:0 4px 18px #00000008}
+.card h3{color:var(--dark);margin-bottom:8px}
+.card p{font-size:14px;color:#667085}
+.calculator{max-width:650px;margin:30px auto;background:white;padding:25px;border-radius:15px;box-shadow:0 5px 25px #0000000c}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.tabs button{background:#edf2ff;color:var(--blue);border:0;padding:10px 14px;border-radius:7px;cursor:pointer}
+.tabs button.active{background:var(--blue);color:white}
+.field{margin:14px 0}
+label{display:block;font-weight:bold;font-size:14px;margin-bottom:6px}
+input{width:100%;padding:12px;border:1px solid #d5dce8;border-radius:7px;font-size:16px}
+.action{width:100%;background:var(--blue);color:white;border:0;padding:13px;border-radius:7px;font-size:16px;cursor:pointer;margin-top:12px}
+.result{background:#edf5ff;padding:16px;border-radius:9px;margin-top:18px;display:none}
+.result strong{color:var(--blue);font-size:22px}
+.ad{background:#fff;border:1px dashed #b8c2d3;padding:25px;text-align:center;color:#8a94a6;margin:25px 0;border-radius:8px;font-size:13px}
+.article{line-height:1.8}
+footer{background:var(--dark);color:white;text-align:center;padding:30px 15px;margin-top:45px}
+footer a{color:#c9d9ff;margin:8px;text-decoration:none;font-size:14px}
+@media(max-width:600px){
+ header{flex-direction:column;gap:10px}
+ nav a{margin:0 7px}
+ .hero h1{font-size:29px}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">💰 Smart Finance Hub</div>
+<nav>
+<a href="#home">Home</a>
+<a href="#tools">Tools</a>
+<a href="#calculator">Calculators</a>
+<a href="#about">About</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<h1>Make Smarter Financial Decisions</h1>
+<p>Free financial calculators and money management tools to help you plan a better financial future.</p>
+</section>
+
+<div class="container">
+<div class="ad">ADVERTISEMENT SPACE</div>
+
+<h2 class="section-title" id="tools">Explore Free Financial Tools</h2>
+<div class="tools">
+<div class="card"><h3>📈 SIP Calculator</h3><p>Estimate your mutual fund SIP returns.</p></div>
+<div class="card"><h3>🏠 EMI Calculator</h3><p>Calculate monthly loan installments.</p></div>
+<div class="card"><h3>🏦 FD Calculator</h3><p>Estimate fixed deposit maturity value.</p></div>
+<div class="card"><h3>🧾 GST Calculator</h3><p>Calculate GST amount and total price.</p></div>
+<div class="card"><h3>💵 Lumpsum Calculator</h3><p>Estimate one-time investment growth.</p></div>
+<div class="card"><h3>💰 Compound Interest</h3><p>Understand the power of compounding.</p></div>
+</div>
+
+<div class="ad">ADVERTISEMENT SPACE</div>
+
+<section class="calculator" id="calculator">
+<h2>Financial Calculators</h2>
+<p>Choose a calculator and enter your details.</p>
+<div class="tabs">
+<button class="active" onclick="showCalc('sip',this)">SIP</button>
+<button onclick="showCalc('emi',this)">EMI</button>
+<button onclick="showCalc('fd',this)">FD</button>
+<button onclick="showCalc('gst',this)">GST</button>
+<button onclick="showCalc('lump',this)">Lumpsum</button>
+<button onclick="showCalc('compound',this)">Compound</button>
+</div>
+
+<div id="sip" class="calc">
+<h3>SIP Calculator</h3>
+<div class="field"><label>Monthly Investment (₹)</label><input id="sipAmount" type="number" value="5000" min="1"></div>
+<div class="field"><label>Expected Annual Return (%)</label><input id="sipRate" type="number" value="12" min="0" step="0.1"></div>
+<div class="field"><label>Investment Period (Years)</label><input id="sipYears" type="number" value="10" min="1"></div>
+<button class="action" onclick="sipCalc()">Calculate SIP</button>
+</div>
+
+<div id="emi" class="calc" hidden>
+<h3>EMI Calculator</h3>
+<div class="field"><label>Loan Amount (₹)</label><input id="loan" type="number" value="1000000" min="1"></div>
+<div class="field"><label>Annual Interest Rate (%)</label><input id="emiRate" type="number" value="9" min="0" step="0.1"></div>
+<div class="field"><label>Loan Period (Years)</label><input id="emiYears" type="number" value="5" min="1"></div>
+<button class="action" onclick="emiCalc()">Calculate EMI</button>
+</div>
+
+<div id="fd" class="calc" hidden>
+<h3>Fixed Deposit Calculator</h3>
+<div class="field"><label>Deposit Amount (₹)</label><input id="fdAmount" type="number" value="100000" min="1"></div>
+<div class="field"><label>Annual Interest Rate (%)</label><input id="fdRate" type="number" value="7" min="0" step="0.1"></div>
+<div class="field"><label>Period (Years)</label><input id="fdYears" type="number" value="5" min="1"></div>
+<button class="action" onclick="fdCalc()">Calculate FD</button>
+</div>
+
+<div id="gst" class="calc" hidden>
+<h3>GST Calculator</h3>
+<div class="field"><label>Amount Before GST (₹)</label><input id="gstAmount" type="number" value="1000" min="0"></div>
+<div class="field"><label>GST Rate (%)</label><input id="gstRate" type="number" value="18" min="0"></div>
+<button class="action" onclick="gstCalc()">Calculate GST</button>
+</div>
+
+<div id="lump" class="calc" hidden>
+<h3>Lumpsum Calculator</h3>
+<div class="field"><label>Investment Amount (₹)</label><input id="lumpAmount" type="number" value="100000" min="1"></div>
+<div class="field"><label>Annual Return (%)</label><input id="lumpRate" type="number" value="12" min="0"></div>
+<div class="field"><label>Period (Years)</label><input id="lumpYears" type="number" value="10" min="1"></div>
+<button class="action" onclick="lumpCalc()">Calculate Returns</button>
+</div>
+
+<div id="compound" class="calc" hidden>
+<h3>Compound Interest Calculator</h3>
+<div class="field"><label>Principal Amount (₹)</label><input id="cpAmount" type="number" value="50000" min="1"></div>
+<div class="field"><label>Annual Interest Rate (%)</label><input id="cpRate" type="number" value="8" min="0"></div>
+<div class="field"><label>Period (Years)</label><input id="cpYears" type="number" value="5" min="1"></div>
+<button class="action" onclick="compoundCalc()">Calculate Interest</button>
+</div>
+
+<div class="result" id="result" aria-live="polite"></div>
+</section>
+
+<div class="ad">ADVERTISEMENT SPACE</div>
+
+<section class="card article" id="about">
+<h2>About Smart Finance Hub</h2>
+<p>Smart Finance Hub is designed to make financial calculations simple and accessible. Our free tools help users understand investments, loans, deposits, taxes and personal budgeting.</p>
+<h3>Why use our calculators?</h3>
+<p>Our calculators provide quick mathematical estimates. You can use them to compare scenarios and plan your finances. Actual returns, interest rates, taxes and fees may differ.</p>
+</section>
+
+<section class="card article" style="margin-top:20px">
+<h2>Important Financial Disclaimer</h2>
+<p>All results are estimates for educational purposes only. Investment returns are not guaranteed. This website does not provide personalized investment, tax or legal advice. Please consult a qualified professional before making financial decisions.</p>
+</section>
+</div>
+
+<footer>
+<h3>Smart Finance Hub</h3>
+<p>Free Financial Tools for Smarter Decisions.</p>
+<p>
+<a href="#home">Home</a>
+<a href="#tools">Tools</a>
+<a href="#about">About</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="terms.html">Terms</a>
+<a href="contact.html">Contact</a>
+<a href="disclaimer.html">Disclaimer</a>
+</p>
+<p>© 2026 Smart Finance Hub. All rights reserved.</p>
+</footer>
+
+<script>
+function val(id){return Number(document.getElementById(id).value)}
+function money(n){return '₹'+n.toLocaleString('en-IN',{maximumFractionDigits:2})}
+function showResult(title,lines){
+let r=document.getElementById('result');
+r.style.display='block';
+r.innerHTML='<h3>'+title+'</h3>'+lines.map(x=>'<p>'+x+'</p>').join('');
+}
+function valid(ids){
+for(let id of ids){
+let e=document.getElementById(id);
+if(!e.value || !Number.isFinite(Number(e.value)) || Number(e.value)<0){
+alert('Please enter valid positive numbers in all fields.');
+e.focus();return false;
+}}
+return true;
+}
+function showCalc(id,btn){
+document.querySelectorAll('.calc').forEach(x=>x.hidden=true);
+document.getElementById(id).hidden=false;
+document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));
+btn.classList.add('active');
+document.getElementById('result').style.display='none';
+}
+function sipCalc(){
+if(!valid(['sipAmount','sipRate','sipYears']))return;
+let p=val('sipAmount'),r=val('sipRate')/1200,n=val('sipYears')*12;
+let total=p*n;
+let fv=r===0?total:p*((Math.pow(1+r,n)-1)/r)*(1+r);
+showResult('Your SIP Estimate',[`Invested Amount: ${money(total)}`,`Estimated Returns: ${money(fv-total)}`,`Estimated Future Value: ${money(fv)}`]);
+}
+function emiCalc(){
+if(!valid(['loan','emiRate','emiYears']))return;
+let p=val('loan'),r=val('emiRate')/1200,n=val('emiYears')*12;
+let emi=r===0?p/n:p*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+showResult('Your Loan Estimate',[`Monthly EMI: ${money(emi)}`,`Total Payment: ${money(emi*n)}`,`Total Interest: ${money(emi*n-p)}`]);
+}
+function fdCalc(){
+if(!valid(['fdAmount','fdRate','fdYears']))return;
+let p=val('fdAmount'),r=val('fdRate')/400,n=val('fdYears')*4;
+let fv=p*Math.pow(1+r,n);
+showResult('Your FD Estimate',[`Deposit: ${money(p)}`,`Interest Earned: ${money(fv-p)}`,`Maturity Amount: ${money(fv)}`]);
+}
+function gstCalc(){
+if(!valid(['gstAmount','gstRate']))return;
+let p=val('gstAmount'),g=p*val('gstRate')/100;
+showResult('GST Breakdown',[`Base Amount: ${money(p)}`,`GST Amount: ${money(g)}`,`Total Amount: ${money(p+g)}`]);
+}
+function lumpCalc(){
+if(!valid(['lumpAmount','lumpRate','lumpYears']))return;
+let p=val('lumpAmount'),fv=p*Math.pow(1+val('lumpRate')/100,val('lumpYears'));
+showResult('Lumpsum Estimate',[`Invested Amount: ${money(p)}`,`Estimated Returns: ${money(fv-p)}`,`Future Value: ${money(fv)}`]);
+}
+function compoundCalc(){
+if(!valid(['cpAmount','cpRate','cpYears']))return;
+let p=val('cpAmount'),fv=p*Math.pow(1+val('cpRate')/100,val('cpYears'));
+showResult('Compound Interest Result',[`Principal: ${money(p)}`,`Interest Earned: ${money(fv-p)}`,`Final Amount: ${money(fv)}`]);
+}
+</script>
+</body>
+</html>
