@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A beginner-friendly guide to Systematic Investment Plans (SIPs): how they work, rupee-cost averaging, risks, and practical planning steps.">
+  <title>SIP Investment Guide: Start Small, Stay Consistent | Smart Finance Hub</title>
+  <style>
+    :root { --ink:#12213a; --muted:#526277; --brand:#087e8b; --brand-dark:#065e68; --accent:#f46d43; --paper:#f6f9fc; --line:#dfe7ef; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; color:var(--ink); background:var(--paper); line-height:1.7; }
+    a { color:var(--brand-dark); }
+    .site-header { background:#fff; border-bottom:1px solid var(--line); }
+    .nav { max-width:1120px; min-height:66px; margin:auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { color:var(--ink); text-decoration:none; font-size:1.12rem; font-weight:800; letter-spacing:-.02em; }
+    .brand span { color:var(--brand); }
+    .nav-link { font-weight:700; text-decoration:none; }
+    .hero { max-width:1120px; margin:44px auto 0; padding:0 24px; display:grid; grid-template-columns:1.05fr .95fr; align-items:center; overflow:hidden; border-radius:24px; background:linear-gradient(120deg,#e8f7f5 0%,#fff 70%); }
+    .hero-copy { padding:46px 12px 46px 40px; }
+    .eyebrow { margin:0 0 12px; color:var(--brand-dark); font-weight:800; font-size:.84rem; letter-spacing:.09em; text-transform:uppercase; }
+    h1 { margin:0; font-size:clamp(2.2rem,5vw,4.2rem); line-height:1.06; letter-spacing:-.055em; }
+    .lede { color:var(--muted); max-width:580px; font-size:1.14rem; margin:20px 0 0; }
+    .meta { display:flex; flex-wrap:wrap; gap:12px; margin-top:24px; color:#40536b; font-size:.94rem; }
+    .meta span { background:#fff; padding:6px 10px; border-radius:999px; border:1px solid var(--line); }
+    .hero img { display:block; width:100%; height:100%; min-height:355px; object-fit:cover; object-position:center; }
+    main { max-width:760px; margin:46px auto 72px; padding:0 24px; }
+    .quick-answer, .warning { border-radius:16px; padding:22px 24px; margin:26px 0; }
+    .quick-answer { background:#eaf8f6; border-left:5px solid var(--brand); }
+    .warning { background:#fff7ed; border-left:5px solid var(--accent); }
+    h2 { margin:48px 0 14px; font-size:1.7rem; line-height:1.2; letter-spacing:-.03em; }
+    h3 { margin:28px 0 8px; font-size:1.17rem; }
+    p, li { color:#34465e; }
+    .steps { padding:0; list-style:none; counter-reset:step; display:grid; gap:14px; }
+    .steps li { counter-increment:step; padding:18px 20px 18px 64px; position:relative; background:#fff; border:1px solid var(--line); border-radius:14px; }
+    .steps li::before { content:counter(step); position:absolute; left:18px; top:18px; width:30px; height:30px; display:grid; place-items:center; border-radius:50%; color:#fff; background:var(--brand); font-weight:800; }
+    .compare { width:100%; border-collapse:collapse; margin:24px 0; background:#fff; border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+    .compare th, .compare td { padding:14px 16px; text-align:left; border-bottom:1px solid var(--line); vertical-align:top; }
+    .compare th { color:var(--ink); background:#edf7f6; }
+    .compare tr:last-child td { border-bottom:0; }
+    .checklist { padding-left:22px; }
+    .checklist li { margin:9px 0; }
+    .faq details { background:#fff; border:1px solid var(--line); border-radius:12px; padding:14px 18px; margin:10px 0; }
+    .faq summary { cursor:pointer; color:var(--ink); font-weight:750; }
+    .faq details p { margin:12px 0 2px; }
+    .article-footer { margin-top:44px; padding-top:24px; border-top:1px solid var(--line); color:var(--muted); font-size:.92rem; }
+    footer { padding:28px 24px; text-align:center; color:#62728a; background:#fff; border-top:1px solid var(--line); font-size:.92rem; }
+    @media (max-width:760px) { .hero { margin-top:22px; padding:0; display:flex; flex-direction:column-reverse; border-radius:0; } .hero-copy { padding:30px 24px; } .hero img { min-height:230px; } main { margin-top:30px; } .nav { padding:0 18px; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <!-- Change index.html if your homepage has a different filename. -->
+      <a class="brand" href="index.html">Smart <span>Finance</span> Hub</a>
+      <a class="nav-link" href="index.html">← Back to calculators</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Beginner's Guide</p>
+      <h1>SIP investing: a simple guide to getting started</h1>
+      <p class="lede">SIP ko samjho in plain language—how a regular investment habit can help you plan thoughtfully, while remembering that markets and returns are never guaranteed.</p>
+      <div class="meta"><span>Updated: November 2026</span><span>8 min read</span><span>Education only</span></div>
+    </div>
+    <img src="assets/sip-investment-guide-hero.png" alt="Illustration of a person planning a regular investment with a chart, notebook, and growing plant">
+  </section>
+
+  <main>
+    <div class="quick-answer">
+      <strong>Quick answer:</strong> A Systematic Investment Plan (SIP) is a way to invest a fixed amount at regular intervals—often monthly—into a chosen mutual fund. It can make investing feel more manageable, but it does not remove market risk or guarantee a return.
+    </div>
+
+    <h2>What is a SIP?</h2>
+    <p>Think of a SIP as a <strong>method of investing</strong>, not a separate product. Instead of putting one large amount into a mutual fund at once, you choose a regular amount and schedule it—for example, ₹500, ₹1,000, or any amount that fits your budget. The money then buys units of the selected fund at that day’s price.</p>
+    <p>For many beginners, this creates a useful routine: earn, cover essential expenses, save an emergency buffer, then invest a planned amount consistently. The “best” amount is not the biggest number; it is one you can realistically continue without putting essential needs at risk.</p>
+
+    <h2>How does a SIP work?</h2>
+    <ol class="steps">
+      <li><strong>Choose a goal and time horizon.</strong> Examples could include a future education expense, a home down payment, or long-term wealth building. A goal helps you decide whether market-linked investing suits the timeline.</li>
+      <li><strong>Select a fund only after research.</strong> Check what the fund invests in, its risk level, costs, investment objective, and whether it matches your time horizon. Consider a registered financial professional if you need personal advice.</li>
+      <li><strong>Set an affordable recurring amount.</strong> The amount is debited on the date you choose and invested in the fund according to its process.</li>
+      <li><strong>Receive units at the applicable price.</strong> When prices are lower, the same contribution may buy more units; when prices are higher, it may buy fewer.</li>
+      <li><strong>Review with purpose—not panic.</strong> Periodic reviews can help you check progress against your goal. Daily price checking may encourage emotional decisions.</li>
+    </ol>
+
+    <h2>Why do people use SIPs?</h2>
+    <table class="compare">
+      <thead><tr><th>Potential benefit</th><th>What it means in real life</th></tr></thead>
+      <tbody>
+        <tr><td>Habit building</td><td>A fixed date and amount can make saving/investing more regular.</td></tr>
+        <tr><td>Rupee-cost averaging</td><td>Regular contributions buy units at different market levels. This can smooth the purchase price over time, but it does not ensure profit or prevent loss.</td></tr>
+        <tr><td>Flexible starting point</td><td>Some funds allow modest starting amounts, so you can begin within your budget.</td></tr>
+        <tr><td>Less timing pressure</td><td>You do not need to decide when to invest every month, though fund choice and suitability still matter.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>A simple illustration (not a promise)</h2>
+    <p>Suppose someone invests ₹2,000 each month for 5 years. Their total contributions would be ₹1,20,000. The final value could be higher or lower than this depending on fund performance, fees, taxes, market movements, and timing. A calculator may show an estimated future value using an assumed annual return, but that is a mathematical illustration—not a forecast.</p>
+    <div class="warning"><strong>Important:</strong> Mutual fund investments are subject to market risk. Past performance does not guarantee future results. Before investing, read the scheme information and understand the risks, charges, exit rules, and tax treatment that apply to you.</div>
+
+    <h2>SIP vs. lump sum: what is the difference?</h2>
+    <p>A SIP spreads investments across multiple dates. A lump sum invests a larger amount on one date. Neither is automatically right for every person or every market condition. Your choice may depend on your cash flow, time horizon, comfort with volatility, and the purpose of the money.</p>
+    <table class="compare">
+      <thead><tr><th></th><th>SIP</th><th>Lump sum</th></tr></thead>
+      <tbody>
+        <tr><td>Investment timing</td><td>Regular intervals</td><td>One or a few larger investments</td></tr>
+        <tr><td>Cash-flow fit</td><td>May suit monthly income patterns</td><td>May suit money already available</td></tr>
+        <tr><td>Market exposure</td><td>Purchased across different price levels</td><td>More dependent on the price when invested</td></tr>
+        <tr><td>Outcome</td><td colspan="2">Both can gain or lose value; neither guarantees a particular return.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Before you start: a sensible checklist</h2>
+    <ul class="checklist">
+      <li>Keep money for rent, bills, and other near-term essentials separate from market investments.</li>
+      <li>Consider building an emergency fund first, based on your circumstances.</li>
+      <li>Set a realistic goal and timeline; short-term goals may not suit volatile investments.</li>
+      <li>Understand the fund’s category, risk label, fees, and redemption/exit terms.</li>
+      <li>Use only regulated platforms and complete KYC requirements where applicable.</li>
+      <li>Do not invest because of social-media hype, a “guaranteed return” claim, or pressure from anyone.</li>
+    </ul>
+
+    <h2>Common questions</h2>
+    <div class="faq">
+      <details><summary>Can I stop or change my SIP later?</summary><p>Many providers allow changes, pauses, or cancellations, but the exact rules vary. Check the terms of the platform and fund before starting. Stopping a SIP is different from redeeming existing units, which may have tax or exit-load implications.</p></details>
+      <details><summary>Is SIP safe?</summary><p>A SIP can create discipline, but the investment’s risk depends on the underlying fund. Market-linked funds can rise and fall in value. “Safe” is not a substitute for checking whether the risk fits your goals and timeline.</p></details>
+      <details><summary>What return will I get from a SIP?</summary><p>No return is guaranteed. Any expected-return figure in a calculator is an assumption used to estimate possible outcomes; real results can differ significantly.</p></details>
+      <details><summary>Should I increase my SIP every year?</summary><p>A “step-up” can be useful for some people when income grows, but it should remain affordable and aligned with other priorities. This is a personal decision, not a rule.</p></details>
+    </div>
+
+    <h2>The bottom line</h2>
+    <p>SIP is a simple way to make investing regular. Its biggest strength is consistency—not a guarantee of returns. Start with a clear purpose, stay within your budget, learn what you are buying, and review your plan calmly over time.</p>
+
+    <div class="article-footer">
+      <strong>Educational disclaimer:</strong> This article is for general information only and is not investment, tax, or financial advice. It does not consider your goals, income, risk tolerance, or personal situation. Consider consulting a qualified, registered professional before making investment decisions.
+    </div>
+  </main>
+  <footer>© Smart Finance Hub · Learn before you invest.</footer>
+</body>
+</html>
